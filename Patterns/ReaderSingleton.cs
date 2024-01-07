@@ -8,7 +8,7 @@ namespace Pattern_Test.Patterns
 {
     public class ReaderSingleton
     {
-        public static ReaderSingleton instance;
+        private static ReaderSingleton instance;
         private List<string> dataList = [];
         private int count = 0;
 
