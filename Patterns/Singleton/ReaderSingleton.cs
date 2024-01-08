@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Pattern_Test.Patterns
+namespace Pattern_Test.Patterns.Singleton
 {
     public class ReaderSingleton
     {
@@ -14,22 +14,23 @@ namespace Pattern_Test.Patterns
 
         private ReaderSingleton() { }
 
-        public static ReaderSingleton getInstance() { 
-            if(instance == null)
+        public static ReaderSingleton getInstance()
+        {
+            if (instance == null)
             {
                 instance = new ReaderSingleton();
-            }  
-            return instance; 
+            }
+            return instance;
         }
 
         public void addData(string data)
         {
-            this.dataList.Add(data);
+            dataList.Add(data);
         }
 
         public void showAll()
         {
-            foreach(string s in dataList)
+            foreach (string s in dataList)
             {
                 Console.WriteLine(s);
             }
