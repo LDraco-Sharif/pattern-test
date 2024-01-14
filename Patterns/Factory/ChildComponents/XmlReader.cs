@@ -10,10 +10,10 @@ namespace Pattern_Test.Patterns.Factory.ChildComponents
     internal class XmlReader : FactoryComponent
     {
         private string readerName = "XML";
-        public ReaderSingleton reader;
+        public LoggerSingleton reader;
         public XmlReader()
         {
-            reader = ReaderSingleton.getInstance();
+            reader = LoggerSingleton.getInstance();
         }
         public override void addMessage(string message)
         {

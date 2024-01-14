@@ -6,19 +6,19 @@ using System.Threading.Tasks;
 
 namespace Pattern_Test.Patterns.Singleton
 {
-    public class ReaderSingleton
+    public class LoggerSingleton
     {
-        private static ReaderSingleton instance;
+        private static LoggerSingleton instance;
         private List<string> dataList = [];
         private int count = 0;
 
-        private ReaderSingleton() { }
+        private LoggerSingleton() { }
 
-        public static ReaderSingleton getInstance()
+        public static LoggerSingleton getInstance()
         {
             if (instance == null)
             {
-                instance = new ReaderSingleton();
+                instance = new LoggerSingleton();
             }
             return instance;
         }

@@ -9,10 +9,10 @@ namespace Pattern_Test.Patterns.Factory.ChildComponents
 {
     public class CsvReader: FactoryComponent {
         private string readerName = "CSV";
-        public ReaderSingleton reader;
+        public LoggerSingleton reader;
         public CsvReader() 
         { 
-            reader = ReaderSingleton.getInstance();
+            reader = LoggerSingleton.getInstance();
         }
         public override void addMessage(string message)
         {
